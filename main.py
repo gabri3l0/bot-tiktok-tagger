@@ -5,8 +5,17 @@ import pyautogui
 from pyautogui import hotkey
 import pyperclip
 
-userNames = ['elisaalopezs','nikolasagrio', 'gregm.v', 'chemagtzr']
-commentsPerHour = 15
+userNames = ['amigo1','amigo2']
+phrases = [
+	'Me gustaria ir al concierto',
+	'Yo iria al concierto con',
+	'Si gano invitaria a',
+	'Vamos',
+	'Super jalo si gano te invito',
+	'Esta sera nuestra oportunidad?',
+]
+
+commentsPerHour = 240
 commentsPerTime = round((60/commentsPerHour),2)
 countComment = 0
 
@@ -22,13 +31,13 @@ time.sleep(4)
 
 
 while True:
-	pyautogui.typewrite('@'+random.choice(userNames))	
+	pyautogui.typewrite(random.choice(phrases)+ ' @'+random.choice(userNames))
 
-	time.sleep(2)
+	time.sleep(1)
 
 	pyautogui.typewrite(["enter"])
-	pyautogui.typewrite(["enter"])
-	pyautogui.typewrite(["enter"])
+	# pyautogui.typewrite(["enter"])
+	# pyautogui.typewrite(["enter"])
 
 
 	now = datetime.now()
@@ -37,4 +46,5 @@ while True:
 
 	print('Comment #', countComment, ' posted at ',current_time)
 
-	time.sleep(commentsPerTime * 60)
+	# time.sleep(commentsPerTime * 60)
+	time.sleep(2)
