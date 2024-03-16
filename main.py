@@ -5,14 +5,14 @@ import pyautogui
 from pyautogui import hotkey
 import pyperclip
 
-usernames = ['amigo1','amigo2']
+usernames = ['gabolopezs', 'jairacevedo4', 'erickaracely']
 phrases = [
-	'Me gustaria ir al concierto',
-	'Yo iria al concierto con',
-	'Si gano invitaria a',
-	'Vamos',
-	'Super jalo si gano te invito',
-	'Esta sera nuestra oportunidad?',
+	'El mas escuchado es Imagine Dragons y me gustaria ir al concierto con',
+	'Es Imagine Dragons!!! espero que ganemos',
+	'Obviamente el artista mas escuchado es Imagine Dragons, espero que ganemos',
+	'Es Imagine Dragons, vamos o que',
+	'El top es imagine dragons, te invito',
+	'El mas escuchado es Imagine Dragons y Esta sera nuestra oportunidad?',
 ]
 
 commentsPerHour = 5
@@ -34,9 +34,11 @@ while True:
 	pyautogui.typewrite(random.choice(phrases)+ ' @'+random.choice(usernames))
 
 	time.sleep(1)
-
+	pyautogui.press("down")
+	time.sleep(1)
 	pyautogui.typewrite(["enter"])
-	# pyautogui.typewrite(["enter"])
+	time.sleep(1)
+	pyautogui.typewrite(["enter"])
 	# pyautogui.typewrite(["enter"])
 
 
