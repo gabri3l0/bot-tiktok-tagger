@@ -33,11 +33,11 @@ time.sleep(4)
 while True:
 	pyautogui.typewrite(random.choice(phrases)+ ' @'+random.choice(usernames))
 
-	time.sleep(1)
+	time.sleep(2)
 	pyautogui.press("down")
-	time.sleep(1)
+	time.sleep(2)
 	pyautogui.typewrite(["enter"])
-	time.sleep(1)
+	time.sleep(2)
 	pyautogui.typewrite(["enter"])
 	# pyautogui.typewrite(["enter"])
 
